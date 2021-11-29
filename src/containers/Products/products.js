@@ -38,9 +38,9 @@ const Products = (props) => {
     form.append("description", description);
     form.append("category", categoryId);
 
-    // for (let pic of productPictures) {
-    //   form.append("productPicture", pic);
-    // }
+    for (let pic of productPictures) {
+      form.append("productPicture", pic);
+    }
     productPictures.forEach((pic) => {
       form.append("pic", pic);
     });
@@ -156,11 +156,11 @@ const Products = (props) => {
               <div key={index}>{pic.name}</div>
             ))
           : null}
-        {/* <input
+        <input
           type="file"
           name="productPicture"
           onChange={handleProductPictures}
-        /> */}
+        />
       </Modal>
     );
   };
