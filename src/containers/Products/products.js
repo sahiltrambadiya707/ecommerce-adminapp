@@ -37,13 +37,12 @@ const Products = (props) => {
     form.append("price", price);
     form.append("description", description);
     form.append("category", categoryId);
-
     for (let pic of productPictures) {
       form.append("productPicture", pic);
     }
-    productPictures.forEach((pic) => {
-      form.append("pic", pic);
-    });
+    // productPictures.forEach((productPicture) => {
+    //   form.append("productPictures", productPicture);
+    // });
     dispatch(addProduct(form)).then(() => setShow(false));
   };
   const handleShow = () => setShow(true);
@@ -160,6 +159,7 @@ const Products = (props) => {
           type="file"
           name="productPicture"
           onChange={handleProductPictures}
+          multiple
         />
       </Modal>
     );
@@ -219,7 +219,7 @@ const Products = (props) => {
             <div style={{ display: "flex" }}>
               {productDetails.productPictures.map((picture) => (
                 <div className="productImgContainer">
-                  <img src={picture.img} alt="" />
+                  <img src={picture.img} alt="img" />
                 </div>
               ))}
             </div>
