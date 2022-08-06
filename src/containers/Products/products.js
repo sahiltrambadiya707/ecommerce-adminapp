@@ -151,16 +151,9 @@ const Products = (props) => {
           ))}
         </select>
         {productPictures.length > 0
-          ? productPictures.map((pic, index) => (
-              <div key={index}>{pic.name}</div>
-            ))
+          ? productPictures.map((pic, index) => <div key={index}>{pic.name}</div>)
           : null}
-        <input
-          type="file"
-          name="productPicture"
-          onChange={handleProductPictures}
-          multiple
-        />
+        <input type="file" name="productPicture" onChange={handleProductPictures} multiple />
       </Modal>
     );
   };
@@ -219,7 +212,7 @@ const Products = (props) => {
             <div style={{ display: "flex" }}>
               {productDetails.productPictures.map((picture) => (
                 <div className="productImgContainer">
-                  <img src={picture.img} alt="img" />
+                  <img src={generatePublicUrl(picture?.img)} alt="img" />
                 </div>
               ))}
             </div>

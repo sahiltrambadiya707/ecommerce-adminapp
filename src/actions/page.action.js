@@ -19,8 +19,6 @@ export const createPage = (form) => {
           payload: { error: res.data.error },
         });
       }
-    } catch (error) {
-      console.log(error);
-    }
+    } catch (error) {}
   };
 };

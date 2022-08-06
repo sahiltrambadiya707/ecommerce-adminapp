@@ -19,9 +19,7 @@ export const getCustomerOrders = () => {
           payload: { error },
         });
       }
-    } catch (error) {
-      console.log(error);
-    }
+    } catch (error) {}
   };
 };
 
@@ -40,8 +38,6 @@ export const updateOrder = (payload) => {
           payload: { error },
         });
       }
-    } catch (error) {
-      console.log(error);
-    }
+    } catch (error) {}
   };
 };

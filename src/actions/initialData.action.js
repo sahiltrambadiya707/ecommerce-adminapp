@@ -1,8 +1,4 @@
-import {
-  categoryConstants,
-  productConstants,
-  orderConstants,
-} from "./constants";
+import { categoryConstants, productConstants, orderConstants } from "./constants";
 import axios from "../helpers/axios";
 
 export const getInitialData = () => {
@@ -23,6 +19,5 @@ export const getInitialData = () => {
         payload: { orders },
       });
     }
-    // console.log(res);
   };
 };

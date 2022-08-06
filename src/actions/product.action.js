@@ -16,9 +16,7 @@ const getProducts = () => {
       } else {
         dispatch({ type: productConstants.GET_ALL_PRODUCTS_FAILURE });
       }
-    } catch (error) {
-      console.log(error);
-    }
+    } catch (error) {}
   };
 };
 
@@ -34,9 +32,7 @@ export const addProduct = (form) => {
       } else {
         dispatch({ type: productConstants.ADD_PRODUCT_FAILURE });
       }
-    } catch (error) {
-      console.log(error);
-    }
+    } catch (error) {}
   };
 };
 
@@ -60,8 +56,6 @@ export const deleteProductById = (payload) => {
           },
         });
       }
-    } catch (error) {
-      console.log(error);
-    }
+    } catch (error) {}
   };
 };
